@@ -24,6 +24,7 @@ public class AddressBook {
                 break;
             }
         }
+        System.out.println(firstName+" Updated Successfully to the Contacts");
     }
 
     public void deleteContact(Contact contact) {
@@ -47,4 +48,14 @@ public class AddressBook {
     }
 
 
+    public Contact getContact(int index) {
+        int objectIndex = -1;
+        for(Contact contact: contacts) {
+            objectIndex++;
+            if(index==objectIndex) {
+                return contact;
+            }
+        }
+        return null;
+    }
 }
